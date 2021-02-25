@@ -1,0 +1,262 @@
+%------------------------------------------------------------------------------
+% CV in Latex
+% Author : Charles Rambo
+% Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
+% Most recently updated version may be found at https://github.com/fizixmastr 
+% License : MIT
+%------------------------------------------------------------------------------
+
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+\begin{comment}
+I am by no means a professional when it comes to the CV's/resumes, I have
+received various trainings on how to write a CV and resume from my high 
+school, as well as the Austin College and University of Eastern Finland's
+career counseling departments. As I intend to share my CV as a template, I 
+feel that it is my responsibility to provide explanations of my work.
+\end{comment}
+
+
+%-----FONT OPTIONS-------------------------------------------------------------
+\begin{comment}
+The font of the document will impact not just how readable it is, but how it is
+perceived. In the "The Craft of Scientific Writing" by Michael Alley, shares a
+common fonts for publication as well as their use. I have chosen to use
+Palatino for its legibility, some others are given below. There is far too much
+about typography to discus here. Note: serif fonts have short projecting
+strokes, sans-serif fonts are sans (without) these strokes.
+\end{comment}
+
+
+% serif
+ \usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+
+% sans-serif
+% \usepackage{helvet}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+% Margins for US Letter size
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+\begin{comment}
+In Europe it is common to include a picture of ones self in the CV. Select
+which heading appropriate for the document you are creating.
+\end{comment}
+
+\begin{minipage}[c]{0.05\textwidth}
+\-\
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+% \begin{tikzpicture}
+%     \clip (0,0) circle (1.75cm);
+%     \node at (0,-.7) {\includegraphics[width = 9cm]{portrait}}; 
+%     % if necessary the picture may be moved by changing the at (coordinates)
+%     % width defines the 'zoom' of the picture
+% \end{tikzpicture}
+\hfill\vline\hfill
+\end{minipage}
+% \begin{minipage}[c]{0.4\textwidth}
+%     \textbf{\Huge \scshape{Charles Rambo}} \\ \vspace{1pt} 
+%     % \scshape sets small capital letters, remove if desired
+%     \small{+1 123-456-7890} \\
+%     \href{mailto:you@provider.com}{\underline{you@provider.com}}\\
+%     % Be sure to use a professional *personal* email address
+%     \href{https://www.linkedin.com/in/charles-rambo/}{\underline{linkedin.com/in/charles-rambo}} \\
+%     % you should adjust you linked in profile name to be professional and recognizable
+%     \href{https://github.com/fizixmastr}{\underline{github.com/fizixmastr}}
+% \end{minipage}
+
+
+\begin{center}
+    \textbf{\Huge \scshape Subhashis Gupta} \\ \vspace{0.5pt} %\scshape sets small capital letters, remove if desired
+    \small +91 9066516942 $|$ 
+    \href{mailto:subhasishgupta970@gmail.com}{\underline{subhasishgupta970@gmail.com}} $|$\\
+    % Be sure to use a professional *personal* email address
+    \href{https://www.linkedin.com/in/subh970/}{\underline{https://www.linkedin.com/in/subh970/}} $|$
+    % you should adjust you linked in profile name to be professional and recognizable
+    \href{https://github.com/su-gu}{\underline{github.com/su-gu}}
+\end{center}
+
+
+ 
+%-----WORK EXPERIENCE----------------------------------------------------------
+\section{Work Experience}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What you did}{When you worked there}
+%      {Who you worked for}{Where they are located}
+%      \CVItemListStart
+%        \CVItem{Why it is important to this employer}
+%      \CVItemListEnd
+    \CVSubheading
+      {Software Developer Engineer - Full Time}{Oct 2020 -- Present}
+      {EDVEY TECHNOLOGIES}{Bangalore}
+      
+      
+      \CVItemListStart
+        \CVItem{Developed a mechanism to track student's progress.}
+        \CVItem{Improved the mailing mechanism so that the mails are sent asynchronously.}
+        \CVItem{Working on service that allows users to upload PDF's, files,links and other resources and save them on the cloud(AWS bucket). Also, generates tags according to the description using IBM Watson. }
+        \CVItem{Contributed on setting up of Basic Video on demand using s3 Bucket and CloudFront.}
+        \CVItem{Developed a mechanism to check the validation of the link which is added.}
+        \CVItem{Tech-stack: Laravel/PHP.}
+      \CVItemListEnd
+    \CVSubheading
+      {Full stack Developer - Internship}{January 2020 -- August 2020}
+      {SCRIPT IT SOLUTION}{Bangalore}
+      \CVItemListStart
+        \CVItem{Worked on web app projects using React.js and Django.}
+        \CVItem {Inventory Management System}
+                \CVItemListStart
+                \CVItem{Improved the logic to find the closing stock of the products yearly and quarterly.}
+                \CVItem{Optimize the loading time by adding pagination.}
+                \CVItemListEnd
+        \CVItem{Printing Management}
+        \CVItemListStart
+                \CVItem{Improve the work flow of the orders.}
+                \CVItem{Bug Fixes}
+        \CVItemListEnd
+    \CVItemListEnd
+    \CVSubheading
+      {Data Science and Machine Learning - Internship}{December 2006 -- August 2015}
+      {OliveFinn}{Bangalore}
+      \CVItemListStart
+        \CVItem{Perform Exploratory data analysis on publicly available Bank Data.}
+        \CVItem{Analyse the Data-sets to provide insights about the data.}
+        \CVItem{Recognize the attributes which should be used to filter loan applications.}
+      \CVItemListEnd
+  \CVSubHeadingListEnd
+%-----SKILLS-------------------------------------------------------------------
+\begin{comment}
+This section is compressed from the various skills sections that Euro CV
+recommends.
+\end{comment}
+
+\section{Skills}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, PHP, JavaScript} \\
+     \textbf{Tools/Frameworks/Database}{: GIT, Jupyter, Laravel, Lumen, Django, ReactJS, MySQL} \\
+     \textbf{CSE Fundamentals}{: Algorithms, Data Structure} \\
+    }}
+ \end{itemize}
+   
+%-----PROJECTS AND RESEARCH----------------------------------------------------
+\begin{comment}
+Ideally the title of the work should speak for what it is. However if you feel
+like you should explain more about why the project is applicable to this job,
+use item list as is shown in the work experience section.
+\end{comment}
+
+\section{Projects}
+  \CVSubHeadingListStart
+%    \CVSubheading
+%      {Title of Work}{When it was done}
+%      {Institution you worked with}{unused}
+    \CVSubheading
+      {{To-Do Web App} $|$ \emph{\small\color{gray}{Laravel, HTML,CSS,JS}}}{}
+      {To-Do app which allows creation of tasks with option to upload files, add due date and add tags.\\ A user can also assign tasks to other users. }{}
+    \CVSubheading
+      {{VISITOR MANAGEMENT SYSTEM} $|$ \emph{\small\color{gray}{HTML/CSS, MySQL, PHP, Bootstrap}}}{}
+      {A web app to facilitate visitor management system for college}{}
+    \CVSubheading
+      {{Digit Recognition using KNN Algorithm} $|$ \emph{\small\color{gray}{Python, Jupyter Notebook}}}{}
+      {Obtained an accuracy of 96\%.}{}
+    
+  \CVSubHeadingListEnd
+
+
+%-----EDUCATION----------------------------------------------------------------
+\section{Education}
+  \CVSubHeadingListStart
+%    \CVSubheading % Example
+%      {Degree Achieved}{Years of Study}
+%      {Institution of Study}{Where it is located}
+    \CVSubheading
+      {{CMR Institute of Technology  {}}}{Bangalore}
+      {Computer Science Engineering, 2020}{}
+  
+  \CVSubHeadingListEnd
+%------------------------------------------------------------------------------
+\end{document}
